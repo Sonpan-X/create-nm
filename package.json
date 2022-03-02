@@ -1,0 +1,57 @@
+{
+  "name": "@zce/create-nm",
+  "version": "0.4.0",
+  "description": "A scaffolding tools for creating node modules.",
+  "keywords": [
+    "module",
+    "node",
+    "scaffolding",
+    "scaffold",
+    "caz",
+    "zce"
+  ],
+  "repository": "zce/create-nm",
+  "license": "MIT",
+  "author": "zce <w@zce.me> (https://zce.me)",
+  "main": "index.js",
+  "bin": "cli.js",
+  "files": [
+    "template"
+  ],
+  "scripts": {
+    "test": "standard --fix && jest"
+  },
+  "jest": {
+    "testTimeout": 20000,
+    "modulePathIgnorePatterns": [
+      "<rootDir>/template"
+    ]
+  },
+  "renovate": {
+    "extends": [
+      "zce"
+    ],
+    "ignorePaths": [
+      "template"
+    ]
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "ignore": [
+      "template"
+    ]
+  },
+  "dependencies": {
+    "caz": "^0.6.0"
+  },
+  "devDependencies": {
+    "jest": "27.0.6",
+    "standard": "16.0.3"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  }
+}
